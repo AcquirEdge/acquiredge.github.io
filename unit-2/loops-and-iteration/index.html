@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Loops and Iteration - AcquirEdge Academy</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Loops and Iteration";
+        var mkdocs_page_input_path = "unit-2\\loops-and-iteration.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> AcquirEdge Academy
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/starting-an-assignment/">Starting an Assignment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/submitting-an-assignment/">Submitting an Assignment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/scheduling-coaching-session/">Scheduling a Coaching Session</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/getting-help/">Getting Help Guide</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Units</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Unit 0</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-0/example/">Example</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unit 1</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-1/introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-1/variables-and-data/">Variables and Data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-1/conditional-logic/">Conditional Logic</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Unit 2</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../arrays/">Arrays</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Loops and Iteration</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#objectives">Objectives</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-terms">Key Terms</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#loop">loop</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop">for loop</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop-initialization">for loop initialization</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop-condition">for loop condition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop-incrementing-statement">for loop incrementing statement</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop-body">for loop body</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#iteration">iteration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loops-and-iteration-assignment">Loops and Iteration Assignment</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#for-loop-background">For Loop Background</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#iterating-over-arrays-background">Iterating over Arrays Background</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops-and-iteration-exercise">Loops and Iteration Exercise</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submitting">Submitting</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unit 3</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-3/objects/">Objects</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-3/functions/">Functions</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unit 4</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-4/variable-scope/">Variable Scope</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-4/higher-order-programming/">Higher Order Programming</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unit 5</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-5/html-and-css/">HTML and CSS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-5/dom-querying/">Dom Querying</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unit 6</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-6/dynamic-content/">Dynamic Content</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unit-6/json-apis/">JSON APIs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Capstone Project</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../capstone/top9/">Top 9 Movies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../capstone/creative-opportunities/">Creative Opportunities</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Bonus</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../bonus/PREP/">PREP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../bonus/css-layouts/">CSS Layouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../bonus/next-steps/">Next Steps</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">AcquirEdge Academy</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Units</li>
+          <li class="breadcrumb-item">Unit 2</li>
+      <li class="breadcrumb-item active">Loops and Iteration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="loops-and-iteration">Loops and Iteration</h1>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>
+<p><strong>Use a for loop to repeat an action several times</strong></p>
+</li>
+<li>
+<p><strong>Diagram the anatomy of a <em>for loop</em></strong></p>
+</li>
+<li>
+<p><strong>Programmatically iterate over an array, and perform the same action to each item in the array.</strong></p>
+</li>
+</ul>
+<h2 id="key-terms">Key Terms</h2>
+<h4 id="loop">loop</h4>
+<p>a section of code that may execute multiple times before continuing on to the next line in the program</p>
+<h4 id="for-loop">for loop</h4>
+<p>a loop with a special syntax for managing a "loop variable", a common looping scenario</p>
+<pre><code>for (let i = 0; i &lt;= 12; i = i + 2) {
+    console.log(i);
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Using <code>i</code> for your loop variable is a common coding convention.</p>
+</blockquote>
+<h4 id="for-loop-initialization">for loop initialization</h4>
+<p>part before the first <code>;</code> that set any initial values</p>
+<h4 id="for-loop-condition">for loop condition</h4>
+<p>part after the first <code>;</code> that executes <strong>before</strong> entering the loop body - if this condition is true, the loop will repeat</p>
+<h4 id="for-loop-incrementing-statement">for loop incrementing statement</h4>
+<p>part after the second <code>;</code> that executes after the loop body, usually used to increment or decrement a counter</p>
+<h4 id="for-loop-body">for loop body</h4>
+<p>section of code between <code>{ }</code> that repeats for each iteration of the loop</p>
+<h4 id="iteration">iteration</h4>
+<p>repetition of a procedure in a loop, often used in regards to performing operations on multiple item in an array</p>
+<pre><code>let colors = ["red", "yellow", "green"];
+for (let i = 0; i &lt; colors.length; i++) {
+    console.log(colors[i]);
+}
+</code></pre>
+<h2 id="loops-and-iteration-assignment">Loops and Iteration Assignment</h2>
+<p>In this assignment, you will learn about the basics of looping and iteration, a fundamental concept of programming.</p>
+<p>Make sure to go through the guide to <a href="../../guides/starting-an-assignment/">starting an assignment</a> before continuing. There will be a folder called "examples" where you can try out the example code below.</p>
+<h3 id="for-loop-background">For Loop Background</h3>
+<p>Computers are really good at handling our repetitive tasks for us.</p>
+<p>One of the most common ways to tell JavaScript to do something for us several times is to use a For Loop.</p>
+<p>Here's an example for loop that will count up from 1 to 100 and log each number:</p>
+<pre><code>for (let i = 1; i &lt;= 100; i++) {
+    console.log(i);
+}
+
+console.log("whew!");
+</code></pre>
+<p>The top of the For Loop is composed of three parts separated by semicolons (NOT commas!) that you will customize based on the behavior you want.</p>
+<h4 id="for-initialization-condition-incrementing-statement">for ( INITIALIZATION; CONDITION; INCREMENTING STATEMENT )</h4>
+<ul>
+<li>
+<p><strong>INITIALIZATION</strong>: Where do we start? This is normally where you'll declare a new variable to use in the loop, and you'll also assign it an initial value. The initialization runs only once at the very beginning of the loop.</p>
+</li>
+<li>
+<p><strong>CONDITION</strong>: When do we stop looping? This condition is checked before each iteration to determine whether or not to loop again. Once the condition is no longer true, the loop will end and JavaScript will move on to the next statement in your program.</p>
+</li>
+<li>
+<p><strong>INCREMENTING STATEMENT</strong>: What should be done after each iteration of the loop? Should we increment a variable? Should we decrease it by 2? This section runs after every iteration to increment the loop variable in some way.</p>
+</li>
+</ul>
+<p>Let's take a look at a simpler example, and break down exactly what happens in each iteration:</p>
+<pre><code>for(let i = 0; i &lt; 20; i++) {
+  console.log("hello", i);
+}
+</code></pre>
+<p>Try running this in your <code>example</code> folder and see what comes out of the console.</p>
+<h4 id="first-iteration">First Iteration</h4>
+<ol>
+<li><code>i</code> is <strong>initialized</strong> to the number value <code>0</code> with <code>let i = 0</code>. This <strong>only happens on the first iteration</strong>.</li>
+<li>Check the <strong>condition</strong>(<code>i &lt; 20</code>). Since <code>i</code> is currently <code>0</code>, this is <code>true</code>.</li>
+<li>Since the condition above is true, we go into the <a href="#for-loop-body">loop body</a>. On this iteration, we log "<strong>hello 0</strong>" to the console since <code>i = 0</code>.</li>
+<li>Execute the <strong>incrementing statement</strong>. In this case, <code>i++</code> runs, and <code>i</code> becomes <code>1</code>.</li>
+</ol>
+<h4 id="second-iteration">Second Iteration</h4>
+<ol>
+<li>Since this is no longer the first iteration, we go straight to the condition. <code>i</code> is currently <code>1</code>, so <code>i &lt; 20</code> is still <code>true</code>.</li>
+<li>We go into the loop body again, and print out "<strong>hello 1</strong>" this time, since <code>i</code> is <code>1</code>.</li>
+<li>Execute the <strong>incrementing statement</strong> again. <code>i++</code> runs, and <code>i</code> becomes <code>2</code>.</li>
+</ol>
+<h4 id="third-iteration">Third Iteration</h4>
+<ol>
+<li>The condition <code>i &lt; 20</code> is still <code>true</code> because <code>i</code> is currently <code>2</code>.</li>
+<li>We go into the loop body again, and print out "<strong>hello 2</strong>", since <code>i</code> is <code>2</code>.</li>
+<li>Execute the <strong>incrementing statement</strong> again. <code>i++</code> runs, and <code>i</code> becomes <code>3</code>.</li>
+</ol>
+<p>Starting to see a pattern here? Let's skip to the end of the loop to the 19th iteration next.</p>
+<h4 id="nineteenth-iteration">Nineteenth Iteration</h4>
+<ol>
+<li>The condition <code>i &lt; 20</code> is <code>true</code> because <code>i</code> is currently <code>18</code>.</li>
+<li>We go into the loop body, and print out "<strong>hello 18</strong>", since <code>i</code> is <code>18</code>.</li>
+<li>Execute the <strong>incrementing statement</strong> . <code>i++</code> runs, and <code>i</code> becomes <code>19</code>.</li>
+</ol>
+<h4 id="twentieth-iteration">Twentieth Iteration</h4>
+<ol>
+<li>The condition <code>i &lt; 20</code> is <code>true</code> because <code>i</code> is currently <code>19</code>. Note that this is the last number that will return <code>true</code> for the condition <code>i &lt; 20</code>.</li>
+<li>We go into the loop body, and print out "<strong>hello 19</strong>", since <code>i</code> is <code>19</code>.</li>
+<li>Execute the <strong>incrementing statement</strong> . <code>i++</code> runs, and <code>i</code> becomes <code>20</code>.</li>
+</ol>
+<h4 id="twenty-first-iteration">Twenty First Iteration</h4>
+<ol>
+<li>The condition <code>i &lt; 20</code> is <code>false</code> because <code>i</code> is currently <code>20</code>.</li>
+<li>The <code>for</code> loop ends.</li>
+</ol>
+<h3 id="iterating-over-arrays-background">Iterating over Arrays Background</h3>
+<p>Arrays and for loops are often used together so we can perform the same operations to every item in the array.</p>
+<p>This process of looping over arrays is called <a href="#iteration">iteration</a>.</p>
+<p>Here's an example of how we might iterate over an array of pet names and "yell" each one.</p>
+<pre><code>let petNames = ["Fluffy", "Fido", "Iggy"];
+
+for ( let i=0; i &lt; petNames.length; i++ ){
+    let currentPetName = petNames[i];
+    console.log(currentPetName.toUpperCase());
+}
+</code></pre>
+<p>Notice above that we're using <code>petNames[i]</code> to access the current <code>petName</code>. This works because when we iterate over an array, the loop variable <code>i</code> represents the index number we are currently working with.</p>
+<p>For example, on the first loop <code>i</code> will be <code>0</code>, so <code>petNames[i]</code> becomes <code>petNames[0]</code>, which will give us <code>"Fluffy"</code>. Then, on the second loop, <code>i</code> will be <code>1</code>, so <code>petNames[i]</code> becomes <code>petNames[1]</code>, which will give us <code>"Fido"</code>.</p>
+<p>Complete the <strong>Loops and Iteration Exercise</strong> before continuing.</p>
+<h3 id="loops-and-iteration-exercise">Loops and Iteration Exercise</h3>
+<ol>
+<li>
+<p>Open <code>index.html</code> in Live Server and read the HTML code. Open up the Developer Console. Open <code>script.js</code> in VS Code.</p>
+<blockquote>
+<p><strong>Note:</strong> For the first for loop below, I will provide you with many of the necessary components of the loop. For the next ones I ask you to write, you won't recieve as much guidance.</p>
+</blockquote>
+</li>
+<li>
+<p>Write a for loop that logs each number from <strong>0 to 10</strong>, <strong>including</strong> 10. Your for loop should have the following:</p>
+<ul>
+<li><strong>initialization</strong> should be: <code>let i = 0</code> since we're starting from <code>0</code></li>
+<li><strong>condition</strong> should be <code>i &lt;= 10</code> since we are including 10. If we were NOT including 10, we would use <code>i &lt; 10</code>.</li>
+<li>
+<p><strong>incrementing statement</strong> should be <code>i++</code> or <code>i += 1</code> since we are printing out <strong>each number</strong>.</p>
+<blockquote>
+<p><strong>Hint:</strong> If we were printing out <em>every other number</em>, we would do <code>i += 2</code>.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>loop body</strong> would be one line <code>console.log(i)</code> since we are simply <strong>logging each number</strong> for each iteration.</p>
+<blockquote>
+<p><strong>Note</strong>: Feel free to comment out your completed loops as you go to reduce clutter in your console. Just be sure to uncomment them at the end before you submit so you can take a screenshot!</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>Using the same logic as above, write 2 more for loops after the first:</p>
+<ul>
+<li>Write a for loop that logs <strong>every other number</strong> from <strong>3 to 15</strong>, <strong>including</strong> 15.</li>
+<li>Write a for loop that logs <strong>every fifth number</strong> from <strong>0 to 50</strong>, <strong>not including</strong> 50.</li>
+</ul>
+</li>
+<li>
+<p>Declare an array <code>fruits</code> that contains the following fruits:</p>
+<ul>
+<li><code>"Apple"</code></li>
+<li><code>"Orange"</code></li>
+<li><code>"Pear"</code></li>
+<li><code>"Plum"</code></li>
+<li><code>"Banana"</code></li>
+</ul>
+</li>
+<li>
+<p>Using a for loop, iterate over the <code>fruits</code> array, and print out each fruit.</p>
+</li>
+<li>
+<p>Declare an array <code>presidents</code> that contains the first 5 presidents of the United States:</p>
+<ul>
+<li><code>"Washington"</code></li>
+<li><code>"Adams"</code></li>
+<li><code>"Jefferson"</code></li>
+<li><code>"Madison"</code></li>
+<li><code>"Monroe"</code></li>
+</ul>
+</li>
+<li>
+<p>Using a for loop, iterate over the <code>presidents</code> array, and log each president to the console.</p>
+</li>
+<li>
+<p>Edit the previous for loop you wrote so that it iterates over the <code>presidents</code> array and <strong>logs each president with a label for the number president that they were</strong>.</p>
+<p>For example:</p>
+<blockquote>
+<p><strong>1: Washington</strong>.</p>
+</blockquote>
+</li>
+<li>
+<p>After you are done, take a screenshot of your Developer Console. This exercise has a <strong><em>lot</em></strong> of output. You may need more than one screenshot. The final one should look something like this:</p>
+<p><img alt="Loops and Iteration Screenshot" src="../img/loops-and-iteration-exercise-example.png" /></p>
+</li>
+</ol>
+<h2 id="submitting">Submitting</h2>
+<p>Complete the questions in <code>quiz.md</code> if you haven't already.</p>
+<p>Please follow the instructions in <a href="../../guides/submitting-an-assignment/">submitting an exercise</a> to submit your assignment solution.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../arrays/" class="btn btn-neutral float-left" title="Arrays"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../unit-3/objects/" class="btn btn-neutral float-right" title="Objects">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../arrays/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../unit-3/objects/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
